@@ -15,15 +15,11 @@ public class Delivery {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
+    private Long productId;
     private String productName;
-
     private Integer qty;
-
     private Long orderId;
-
     private String address;
-
     private String status;
 
     @PostPersist
@@ -40,13 +36,19 @@ public class Delivery {
     }
 
     public static void startDelivery(OrderPlaced orderPlaced) {
-        /** Example 1:  new item 
+        /** Example 1:  new item     */
         Delivery delivery = new Delivery();
+        delivery.setOrderId(orderPlaced.getId());
+        delivery.setProductId(orderPlaced.getProductId());
+        delivery.setProductName(orderPlaced.getProductName());
+        delivery.setQty(orderPlaced.getQty());
+        delivery.setStatus("DeliveryStarted");
+        
         repository().save(delivery);
-
+        
         DeliveryStarted deliveryStarted = new DeliveryStarted(delivery);
         deliveryStarted.publishAfterCommit();
-        */
+    
 
         /** Example 2:  finding and process
         

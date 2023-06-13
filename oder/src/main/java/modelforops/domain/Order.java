@@ -15,11 +15,9 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
+    private Long productId;    
     private String productName;
-
     private Integer qty;
-
     private String status;
 
     @PostPersist

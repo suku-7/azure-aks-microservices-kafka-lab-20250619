@@ -10,6 +10,12 @@ import modelforops.infra.AbstractEvent;
 public class DeliveryStarted extends AbstractEvent {
 
     private Long id;
+    private Long productId;
+    private String productName;
+    private Integer qty;
+    private Long orderId;
+    private String address;
+    private String status;
 
     public DeliveryStarted(Delivery aggregate) {
         super(aggregate);

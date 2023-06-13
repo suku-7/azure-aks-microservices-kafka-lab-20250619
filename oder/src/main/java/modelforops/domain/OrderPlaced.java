@@ -10,7 +10,11 @@ import modelforops.infra.AbstractEvent;
 public class OrderPlaced extends AbstractEvent {
 
     private Long id;
-
+    private Long productId;    
+    private String productName;
+    private Integer qty;
+    private String status;
+    
     public OrderPlaced(Order aggregate) {
         super(aggregate);
     }
