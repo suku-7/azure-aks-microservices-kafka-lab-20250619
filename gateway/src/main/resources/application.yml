@@ -8,7 +8,7 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: oder
+        - id: order
           uri: http://localhost:8081
           predicates:
             - Path=/orders/**, 
@@ -43,8 +43,8 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: oder
-          uri: http://oder:8080
+        - id: order
+          uri: http://order:8080
           predicates:
             - Path=/orders/**, 
         - id: delivery
