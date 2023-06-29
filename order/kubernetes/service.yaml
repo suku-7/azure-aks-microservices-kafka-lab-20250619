@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: oder
+  name: order
   labels:
-    app: oder
+    app: order
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: oder
+    app: order
