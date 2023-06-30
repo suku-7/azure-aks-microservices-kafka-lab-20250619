@@ -34,26 +34,19 @@ public class Inventory {
     }
 
     public static void decreaseStock(DeliveryStarted deliveryStarted) {
-        /** Example 1:  new item 
-        Inventory inventory = new Inventory();
-        repository().save(inventory);
-
-        StockDecreased stockDecreased = new StockDecreased(inventory);
-        stockDecreased.publishAfterCommit();
-        */
-
-        /** Example 2:  finding and process
         
-        repository().findById(deliveryStarted.get???()).ifPresent(inventory->{
+       
+        repository().findById(deliveryStarted.getProductId()).ifPresent(inventory->{
             
             inventory // do something
+            inventory.setStock(inventory.getStock() - deliveryStarted.getQty());
             repository().save(inventory);
 
             StockDecreased stockDecreased = new StockDecreased(inventory);
             stockDecreased.publishAfterCommit();
 
          });
-        */
+
 
     }
 }
