@@ -38,7 +38,7 @@ public class Inventory {
        
         repository().findById(deliveryStarted.getProductId()).ifPresent(inventory->{
             
-            inventory // do something
+            //inventory // do something
             inventory.setStock(inventory.getStock() - deliveryStarted.getQty());
             repository().save(inventory);
 
