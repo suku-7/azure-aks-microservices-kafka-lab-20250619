@@ -14,3 +14,8 @@ curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/d
 sudo mv /tmp/eksctl /usr/local/bin
 
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash 
+
+# If you are using GCP, Uncomment # to install gcloud tool.
+# echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+# curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+# sudo apt-get update && sudo apt-get install google-cloud-cli
