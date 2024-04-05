@@ -108,8 +108,8 @@ eksctl create iamserviceaccount \
 echo "."
 echo "Create aws-efs-csi-driver and upgrade with Helm..."
 helm repo add aws-efs-csi-driver https://kubernetes-sigs.github.io/aws-efs-csi-driver &&
-helm repo update &&
-helm upgrade -i aws-efs-csi-driver aws-efs-csi-driver/aws-efs-csi-driver \
+helm repo update aws-efs-csi-driver &&
+helm upgrade --install aws-efs-csi-driver aws-efs-csi-driver/aws-efs-csi-driver \
   --namespace kube-system \
   --set image.repository=${region_repository_mapping[$REGION_CODE]}/eks/aws-efs-csi-driver \
   --set controller.serviceAccount.create=false \
