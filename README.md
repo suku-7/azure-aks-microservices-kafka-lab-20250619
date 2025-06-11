@@ -16,7 +16,7 @@ docker-compose exec -it kafka /bin/bash
 cd /bin
 ./kafka-console-consumer --bootstrap-server localhost:9092 --topic
 ```
-
+ 
 ## Run the backend micro-services
 See the README.md files inside the each microservices directory:
 
@@ -66,7 +66,7 @@ sudo apt install iputils-ping
 pip install httpie
 ```
 
-- kubernetes utilities (kubectl)
+- kubernetes utilities  (kubectl)
 ```
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
