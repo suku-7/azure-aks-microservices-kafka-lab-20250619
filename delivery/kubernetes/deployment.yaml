@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: delivery
-          image: username/delivery:latest
+          image: sukuai/delivery:250617
           ports:
             - containerPort: 8080
           readinessProbe:

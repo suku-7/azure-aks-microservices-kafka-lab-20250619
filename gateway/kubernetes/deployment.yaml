@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: gateway
-          image: username/gateway:latest
+          image: sukuai/gateway:250617
           ports:
             - containerPort: 8080

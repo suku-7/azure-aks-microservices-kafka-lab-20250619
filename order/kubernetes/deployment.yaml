@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: order
-          image: username/order:latest
+          image: sukuai/order:250617
           ports:
             - containerPort: 8080
           readinessProbe:
